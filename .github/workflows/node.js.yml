@@ -47,7 +47,7 @@ jobs:
         with:
           name: report
           if-no-files-found: error
-          path: ./jest-html-report
+          path: ./report-api-tests
 
       # Загрузка покрытия
       - name: Upload coverage
@@ -75,5 +75,5 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           projectName: ${{ vars.CLOUDFLARE_PROJECT_NAME }}
-          directory: ./jest-html-report
+          directory: ./report-api-tests
           githubToken: ${{ secrets.TOKEN_GITHUB }}
